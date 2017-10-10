@@ -8,7 +8,6 @@
 * Gombás ételek külön feltüntetése
 * Akciós ajánlatok
 * Kategorizálás (leves,főétel,szárnyasok..)
-* 
 
 ### Nem funkcionális követelmények
 
