@@ -26,4 +26,4 @@ A futtatáshoz szükséges hardver:
 Egyéb követelmények:
 * Intuitív felhasználói felület, könnyű kezelhetőség
 
-![Cicaaa](http://www.readersdigest.ca/wp-content/uploads/2011/01/4-ways-cheer-up-depressed-cat.jpg)
+![Cicaaa](https://scontent.fbud5-1.fna.fbcdn.net/v/t34.0-12/22472830_1590360404361834_551359648_n.jpg?oh=3dec9fcae14ed3962e0d98bd77ab1108&oe=59E2E3F2)
