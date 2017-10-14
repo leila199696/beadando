@@ -1,9 +1,0 @@
-com\bead\netkaja\model\User.class
-com\bead\netkaja\model\Food.class
-com\bead\netkaja\model\Order.class
-com\bead\netkaja\model\Base.class
-com\bead\netkaja\model\Customer.class
-com\bead\netkaja\model\FoodType.class
-com\bead\netkaja\model\Role.class
-com\bead\netkaja\NetkajaApplication.class
-com\bead\netkaja\model\Allergens.class
