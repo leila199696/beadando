@@ -19,6 +19,6 @@ public class NetkajaApplication {
 		ConfigurableApplicationContext context = SpringApplication.run(NetkajaApplication.class, args);
 		UserService userService = context.getBean(ImpUserService.class);
 		userService.create(new User("admin","admin", Role.ADMIN));
-
+		User user = new User("admin","admin", Role.ADMIN);
 	}
 }
