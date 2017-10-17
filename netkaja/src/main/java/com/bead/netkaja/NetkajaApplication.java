@@ -20,5 +20,6 @@ public class NetkajaApplication {
 		UserService userService = context.getBean(ImpUserService.class);
 		userService.create(new User("admin","admin", Role.ADMIN));
 		User user = new User("admin","admin", Role.ADMIN);
+		new User();
 	}
 }
