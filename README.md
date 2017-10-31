@@ -42,9 +42,10 @@ Egyéb követelmények:
 Amennyiben regisztrálva van a felhasználó (ha nincs akkor regisztrál) belép és valamit beletesz a kosarába. Ha már van valami a kosarában, akkor rányom a rendelés gombra, a rendszer elmenti az adatokat és elküldi a rendelést.Rendelést lehet módosítani és törölni is. Rendelés után a felhasználó kiléphet.
 
 ## Tervezés
-### Architektúra-terv:
-![Architektúra rajz](https://github.com/leila199696/beadando/blob/master/arch.JPG)
+### Architektúra-terv
 #### Oldaltérkép:
+![Architektúra rajz](https://github.com/leila199696/beadando/blob/master/arch.JPG)
+A belső felépítés modellből, seviceből és repositoryból áll stb. Leila írj valamit ide
 #### Végpontok:
 ### Felhasználóifelület-modell
 #### Oldalvázlatok:
