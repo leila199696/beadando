@@ -36,5 +36,6 @@ Egyéb követelmények:
 | Kosárba rakás |belépés    | itt választja ki a felhasználó a kívánt ételeket |
 | Rendelés | étel kosárba helyezése | amíg nem nyom a felhasználó a rendelés gombra, addig nem mentődnek az adatok |
 | Kilépés | belépés | kilépni nem szükséges, de ajánlott |
+
 ####Rendelés menete:
 
