@@ -43,6 +43,7 @@ Amennyiben regisztrálva van a felhasználó (ha nincs akkor regisztrál) belép
 
 ## Tervezés
 ### Architektúra-terv:
+![Architektúra rajz](https://github.com/leila199696/beadando/blob/master/arch.JPG)
 #### Oldaltérkép:
 #### Végpontok:
 ### Felhasználóifelület-modell
