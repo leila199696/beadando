@@ -37,5 +37,5 @@ Egyéb követelmények:
 | Rendelés | étel kosárba helyezése | amíg nem nyom a felhasználó a rendelés gombra, addig nem mentődnek az adatok |
 | Kilépés | belépés | kilépni nem szükséges, de ajánlott |
 
-####Rendelés menete:
-
+#### Rendelés menete:
+![Rendelés menete](https://github.com/leila199696/beadando/blob/master/rendel.PNG)
