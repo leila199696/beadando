@@ -27,7 +27,7 @@ Egyéb követelmények:
 * Intuitív felhasználói felület, könnyű kezelhetőség
 
 #### Használati-eset diagram:
-![Használati-eset diagram](https://scontent.fbud5-1.fna.fbcdn.net/v/t34.0-12/22472830_1590360404361834_551359648_n.jpg?oh=3dec9fcae14ed3962e0d98bd77ab1108&oe=59E2E3F2)
+![Használati-eset diagram](https://github.com/leila199696/beadando/blob/master/funkcio.jpg)
 
 | Használati eset neve        | Előfeltétel           | Leírás  |
 | ------------- | -------------| -----|
