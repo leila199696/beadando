@@ -52,3 +52,7 @@ Amennyiben regisztrálva van a felhasználó (ha nincs akkor regisztrál) belép
 #### Adatbázisterv:
 #### Állapotdiagram:
 ### Dinamikus működés
+
+## Implementáció
+## Tesztelés
+## Felhasználói dokumentáció
