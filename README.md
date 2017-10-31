@@ -1,4 +1,5 @@
 # NETKaja
+## Követelményanalízis
 ### Funkcionális követelmények
 
 * Regisztrálás / bejelentkezés
@@ -39,3 +40,15 @@ Egyéb követelmények:
 
 #### Rendelés menete:
 Amennyiben regisztrálva van a felhasználó (ha nincs akkor regisztrál) belép és valamit beletesz a kosarába. Ha már van valami a kosarában, akkor rányom a rendelés gombra, a rendszer elmenti az adatokat és elküldi a rendelést.Rendelést lehet módosítani és törölni is. Rendelés után a felhasználó kiléphet.
+
+## Tervezés
+### Architektúra-terv:
+#### Oldaltérkép:
+#### Végpontok:
+### Felhasználóifelület-modell
+#### Oldalvázlatok:
+### Osztálymodell
+#### Adatmodell:
+#### Adatbázisterv:
+#### Állapotdiagram:
+### Dinamikus működés
