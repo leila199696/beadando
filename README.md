@@ -43,9 +43,10 @@ Amennyiben regisztrálva van a felhasználó (ha nincs akkor regisztrál) belép
 
 ## Tervezés
 ### Architektúra-terv
+A belső felépítés modellből, seviceből és repositoryból áll stb. Leila írj valamit ide
 #### Oldaltérkép:
 ![Architektúra rajz](https://github.com/leila199696/beadando/blob/master/arch.JPG)
-A belső felépítés modellből, seviceből és repositoryból áll stb. Leila írj valamit ide
+
 #### Végpontok:
 ### Felhasználóifelület-modell
 #### Oldalvázlatok:
