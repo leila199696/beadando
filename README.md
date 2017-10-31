@@ -38,4 +38,4 @@ Egyéb követelmények:
 | Kilépés | belépés | kilépni nem szükséges, de ajánlott |
 
 #### Rendelés menete:
-![Rendelés menete](https://github.com/leila199696/beadando/blob/master/rendel.PNG)
+Amennyiben regisztrálva van a felhasználó (ha nincs akkor regisztrál) belép és valamit beletesz a kosarába. Ha már van valami a kosarában, akkor rányom a rendelés gombra, a rendszer elmenti az adatokat és elküldi a rendelést.Rendelést lehet módosítani és törölni is. Rendelés után a felhasználó kiléphet.
