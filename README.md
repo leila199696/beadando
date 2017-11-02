@@ -43,7 +43,7 @@ Amennyiben regisztrálva van a felhasználó (ha nincs akkor regisztrál) belép
 
 ## Tervezés
 ### Architektúra-terv
-A belső felépítés modellből, seviceből és repositoryból áll stb. Leila írj valamit ide
+A belső felépítés modellből, seviceből és repositoryból áll stb. A modell tartalmazza a táblákat és az adattagokat. Minden táblához külön repository, amely az adatbázisrétegért felel. A service-k megvalósítják az összes backendes funkciót.
 #### Oldaltérkép:
 ![Architektúra rajz](https://github.com/leila199696/beadando/blob/master/arch.JPG)
 
