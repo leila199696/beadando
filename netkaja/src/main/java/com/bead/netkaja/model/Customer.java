@@ -25,9 +25,8 @@ public class Customer extends Base{
     private String email;
     @Column
     private Role status;
-    @Column
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Food> cart;
+
+    private ArrayList<Food> cart;
 
     public Customer(String userName, String password, String name, String address, String phoneNumber, String email) {
         this.userName = userName;
@@ -46,5 +45,17 @@ public class Customer extends Base{
 
     public void addToCart(Food food){
         cart.add(food);
+    }
+
+    public List<Food> getCart(){
+        return cart;
+    }
+
+    public String getPassword(){
+        return password;
+    }
+
+    public String getUserName(){
+        return userName;
     }
 }

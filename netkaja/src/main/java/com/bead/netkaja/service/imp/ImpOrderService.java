@@ -16,7 +16,7 @@ public class ImpOrderService implements OrderService {
 
     @Override
     public List<Order> listOrderFromUser(Customer user) {
-        return null;//TODO
+        return orderRepository.findByCustomer(user);
     }
 
     @Override
