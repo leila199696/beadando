@@ -1,0 +1,16 @@
+com/bead/netkaja/model/Customer.class
+com/bead/netkaja/service/interf/OrderService.class
+com/bead/netkaja/model/Base.class
+com/bead/netkaja/service/imp/ImpOrderService.class
+com/bead/netkaja/model/Food.class
+com/bead/netkaja/model/Order.class
+com/bead/netkaja/model/Allergens.class
+com/bead/netkaja/model/Role.class
+com/bead/netkaja/service/imp/UserServiceValidator.class
+com/bead/netkaja/NetkajaApplication.class
+com/bead/netkaja/service/interf/CRUDService.class
+com/bead/netkaja/service/imp/ImpFoodService.class
+com/bead/netkaja/service/interf/CustomerService.class
+com/bead/netkaja/service/imp/ImpCustomerService.class
+com/bead/netkaja/model/FoodType.class
+com/bead/netkaja/service/interf/FoodService.class
