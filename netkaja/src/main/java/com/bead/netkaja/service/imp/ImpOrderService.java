@@ -1,7 +1,7 @@
 package com.bead.netkaja.service.imp;
 
 import com.bead.netkaja.model.Order;
-import com.bead.netkaja.model.User;
+import com.bead.netkaja.model.Customer;
 import com.bead.netkaja.repository.OrderRepository;
 import com.bead.netkaja.service.interf.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ public class ImpOrderService implements OrderService {
     private OrderRepository orderRepository;
 
     @Override
-    public List<Order> listOrderFromUser(User user) {
+    public List<Order> listOrderFromUser(Customer user) {
         return null;//TODO
     }
 
