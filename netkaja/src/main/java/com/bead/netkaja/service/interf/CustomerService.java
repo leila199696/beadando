@@ -2,15 +2,17 @@ package com.bead.netkaja.service.interf;
 
 import com.bead.netkaja.model.Food;
 import com.bead.netkaja.model.Order;
-import com.bead.netkaja.model.User;
+import com.bead.netkaja.model.Customer;
 
 import java.util.List;
 
-public interface UserService extends CRUDService<User>{
-    void register(User user);
+public interface CustomerService extends CRUDService<Customer>{
+    void register(Customer user);
     void login(String name, String password);
-    void logout(User user);
+    void logout();
     void addFoodToCart(Food food);
     List<Food> listCart();
-    Order createOrder(Order order);
+    Order createOrder();
+    boolean isLoggedIn();
+    Customer getLoggedInUser();
 }
