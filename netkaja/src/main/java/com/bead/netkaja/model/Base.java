@@ -10,9 +10,6 @@ public class Base {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long ID;
-    @Version
-    @Column(name = "VERSION")
-    public Integer version;
 
     public Base() {
     }

@@ -2,6 +2,7 @@ package com.bead.netkaja.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,18 +16,18 @@ public class Allergens extends Base{
     @Column
     private String name;
     @Column
-    @ManyToMany
-    private List<Food> foodList;
-    @Column
     private Integer number;
 
-    public Allergens(String name, List<Food> foodList, Integer number) {
+    public Allergens(String name, Integer number) {
         this.name = name;
-        this.foodList = foodList;
         this.number = number;
     }
 
     public Allergens(){
 
+    }
+
+    public String toString(){
+        return name + " " + number;
     }
 }
