@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Service
 public class ImpAllergensService implements AllergensService {
@@ -36,7 +37,12 @@ public class ImpAllergensService implements AllergensService {
 
     @Override
     public Allergens findByName(String name) {
-        return allergensRepository.findByName(name).get();
+        try{
+            return allergensRepository.findByName(name).get();
+        }catch (NoSuchElementException e){
+            System.out.println("Nincs ilyen elem");
+        }
+        return null;
     }
 
     @Override
