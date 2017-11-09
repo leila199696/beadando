@@ -3,15 +3,16 @@ package com.bead.netkaja.model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Data
 @Entity
 @EqualsAndHashCode(callSuper = false)
-public class Food extends Base{
+public class Food {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    public Long ID;
     @Column
     private FoodType foodType;
     @Column

@@ -10,7 +10,10 @@ import java.util.List;
 @Data
 @Entity
 @EqualsAndHashCode(callSuper = false)
-public class Customer extends Base{
+public class Customer{
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    public Long ID;
     @Column
     private String userName;
     @Column
