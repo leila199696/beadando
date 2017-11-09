@@ -4,15 +4,16 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Data
 @Entity
 @EqualsAndHashCode(callSuper = false)
-public class Allergens extends Base{
+public class Allergens{
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    public Long ID;
     @Column
     private String name;
     @Column
