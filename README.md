@@ -46,13 +46,34 @@ Amennyiben regisztrálva van a felhasználó (ha nincs akkor regisztrál) belép
 ### Architektúra-terv
 A belső felépítés modellből, seviceből és repositoryból áll stb. A modell tartalmazza a táblákat és az adattagokat. Minden táblához külön repository, amely az adatbázisrétegért felel. A service-k megvalósítják az összes backendes funkciót.
 #### Oldaltérkép:
-![Architektúra rajz](https://github.com/leila199696/beadando/blob/master/arch.JPG)
+* Főoldal (ehhez hasonló az új ételekfelvevése)
+* Regisztrációs
+* Eddigi rendelések
+* Személyes adatok módosítása
+
+Azok, akik nem tagok értelemszerűen nem érik el az eddigi rendeléseket sem az adatmódosítást
 
 #### Végpontok:
+* POST /register: Regisztráció
+* GET /register: Regisztrációs oldal
+* POST /login: Bejelentkezés
+* GET /food: Ételek
+* POST /food: Ételek szerkesztése
+* GET /allergens: Allergének
+* POST /allergens: Allergének szerkesztése
+* POST /orders: Rendelések
+* GET /orders: Rendelések oldal
+* GET /customers: Ügyfelek
+* POST /customers: Ügyfelek szerkesztése
+* GET /customer/data: Ügyfél személyes adatai
+* POST /customer/data: Ügyfél személyes adatainak szerkesztése
+
 ### Felhasználóifelület-modell
 #### Oldalvázlatok:
 ### Osztálymodell
 #### Adatmodell:
+![Architektúra rajz](https://github.com/leila199696/beadando/blob/master/arch.JPG)
+
 #### Adatbázisterv:
 #### Állapotdiagram:
 ### Dinamikus működés
