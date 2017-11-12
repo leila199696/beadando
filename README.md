@@ -29,7 +29,7 @@ Egyéb követelmények:
 
 #### Használati-eset diagram:
 ![Használati-eset diagram-felhasználó](https://github.com/leila199696/beadando/blob/master/funkcio.jpg)
-![Használati-eset diagram-admin](https://github.com/leila199696/beadando/blob/master/arch_admin.JPG)
+![Használati-eset diagram-admin](https://github.com/leila199696/beadando/blob/master/funkcio_admin.JPG)
 
 | Használati eset neve        | Előfeltétel           | Leírás  |
 | ------------- | -------------| -----|
