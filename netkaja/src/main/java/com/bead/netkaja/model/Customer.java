@@ -1,50 +1,47 @@
 package com.bead.netkaja.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
 @Entity
-@EqualsAndHashCode(callSuper = false)
-public class Customer{
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    public Long ID;
-    @Column
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper = true)
+public class Customer extends Base{
+    @Column(unique = true, nullable = false)
     private String userName;
-    @Column
+
+    @Column(nullable = false)
     private String password;
-    @Column
+
+    @Column(nullable = false)
     private String name;
-    @Column
+
+    @Column(nullable = false)
     private String address;
-    @Column
+
+    @Column(nullable = false)
     private String phoneNumber;
-    @Column
+
+    @Column(nullable = false)
     private String email;
-    @Column
+
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
     private Role status;
 
+    public enum Role {
+        ADMIN,CUSTOMER;
+    }
+
     private ArrayList<Food> cart;
-
-    public Customer(String userName, String password, String name, String address, String phoneNumber, String email) {
-        this.userName = userName;
-        this.password = password;
-        this.name = name;
-        this.address = address;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-        this.status = Role.CUSTOMER;
-        cart = new ArrayList<>();
-    }
-
-    public Customer(){
-
-    }
 
     public void addToCart(Food food){
         cart.add(food);

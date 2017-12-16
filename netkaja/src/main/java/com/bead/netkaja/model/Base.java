@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Data
 @MappedSuperclass
 public class Base {
-      @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
 
