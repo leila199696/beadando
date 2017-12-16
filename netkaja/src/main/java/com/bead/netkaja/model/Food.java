@@ -18,13 +18,16 @@ public class Food {
     @Column
     private String name;
     @Column
+    private Integer price;
+    @Column
     @ManyToMany
-    private List<Allergens> allergens;
+    private List<Allergen> allergens;
 
-    public Food(FoodType foodType, String name, List<Allergens> allergens) {
+    public Food(FoodType foodType, String name,Integer price, List<Allergen> allergens) {
         this.foodType = foodType;
         this.name = name;
         this.allergens = allergens;
+        this.price = price;
     }
 
     public Food(){

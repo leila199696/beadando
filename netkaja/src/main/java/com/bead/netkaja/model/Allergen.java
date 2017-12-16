@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @Entity
 @EqualsAndHashCode(callSuper = false)
-public class Allergens{
+public class Allergen {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long ID;
@@ -19,12 +19,12 @@ public class Allergens{
     @Column
     private Integer number;
 
-    public Allergens(String name, Integer number) {
+    public Allergen(String name, Integer number) {
         this.name = name;
         this.number = number;
     }
 
-    public Allergens(){
+    public Allergen(){
 
     }
 

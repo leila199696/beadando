@@ -1,8 +1,8 @@
-package com.bead.netkaja.service.imp;
+package com.bead.netkaja.service;
 
 import com.bead.netkaja.model.Customer;
 
-public class UserServiceValidator {
+public class CustomerServiceValidator {
     void isValid(Customer user) throws IllegalArgumentException{
         if(!user.getUserName().matches("[A-Za-z ]")){
             throw new IllegalArgumentException("Betüket kell tartalmaznia a névnek!");

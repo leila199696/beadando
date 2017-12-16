@@ -1,46 +1,43 @@
-package com.bead.netkaja.service.imp;
+package com.bead.netkaja.service;
 
-import com.bead.netkaja.model.Allergens;
+import com.bead.netkaja.model.Allergen;
 import com.bead.netkaja.model.Food;
 import com.bead.netkaja.repository.FoodRepository;
-import com.bead.netkaja.service.interf.FoodService;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.annotation.SessionScope;
 
 import java.util.List;
 
 @Service
-public class ImpFoodService implements FoodService {
+@SessionScope
+@Data
+public class FoodService{
     @Autowired
     private FoodRepository foodRepository;
 
-    @Override
-    public List<Allergens> listAllergenicFood() {
+    public List<Allergen> listAllergenicFood() {
         return foodRepository.listAllergens();
     }
 
-    @Override
     public Food findByName(String name) {
         return foodRepository.findByName(name).get();
     }
 
-    @Override
     public Food create(Food food) {
         return foodRepository.save(food);
     }
 
-    @Override
     public Food delete(Food food) {
         foodRepository.delete(food);
         return food;
     }
 
-    @Override
     public Food update(Food food) {
         return foodRepository.save(food);
     }
 
-    @Override
     public List<Food> list() {
         return foodRepository.findAll();
     }

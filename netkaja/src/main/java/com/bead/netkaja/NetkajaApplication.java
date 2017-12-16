@@ -15,20 +15,20 @@ public class NetkajaApplication {
 		OrderService orderService = context.getBean(ImpOrderService.class);
 
 		//tesztelés create update delete list
-		allergensService.create(new Allergens("Glutén",1));
-		allergensService.create(new Allergens("Rákfélék",2));
-		allergensService.create(new Allergens("Tojás",3));
-		allergensService.create(new Allergens("Hal",4));
-		allergensService.create(new Allergens("Földimogyoró",5));
-		allergensService.create(new Allergens("Szójabab",6));
-		allergensService.create(new Allergens("Tej",7));
-		allergensService.create(new Allergens("Diófélék",8));
-		allergensService.create(new Allergens("Zeller",9));
-		allergensService.create(new Allergens("Mustár",10));
-		Allergens allergens = allergensService.create(new Allergens("Szezámmag",11));
-		allergensService.create(new Allergens("Kén-dioxid",12));
-		allergensService.create(new Allergens("Csillagfürt",13));
-		allergensService.create(new Allergens("Puhatestűek",14));
+		allergensService.create(new Allergen("Glutén",1));
+		allergensService.create(new Allergen("Rákfélék",2));
+		allergensService.create(new Allergen("Tojás",3));
+		allergensService.create(new Allergen("Hal",4));
+		allergensService.create(new Allergen("Földimogyoró",5));
+		allergensService.create(new Allergen("Szójabab",6));
+		allergensService.create(new Allergen("Tej",7));
+		allergensService.create(new Allergen("Diófélék",8));
+		allergensService.create(new Allergen("Zeller",9));
+		allergensService.create(new Allergen("Mustár",10));
+		Allergen allergens = allergensService.create(new Allergen("Szezámmag",11));
+		allergensService.create(new Allergen("Kén-dioxid",12));
+		allergensService.create(new Allergen("Csillagfürt",13));
+		allergensService.create(new Allergen("Puhatestűek",14));
 
 		System.out.println("Allergének listája");
 		allergensService.list().forEach(System.out::println);
