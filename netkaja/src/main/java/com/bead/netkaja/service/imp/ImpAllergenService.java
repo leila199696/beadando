@@ -1,6 +1,6 @@
 package com.bead.netkaja.service.imp;
 
-import com.bead.netkaja.model.Allergens;
+import com.bead.netkaja.model.Allergen;
 import com.bead.netkaja.repository.AllergensRepository;
 import com.bead.netkaja.service.interf.AllergensService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,28 +15,28 @@ public class ImpAllergensService implements AllergensService {
     private AllergensRepository allergensRepository;
 
     @Override
-    public Allergens create(Allergens allergens) {
-        return allergensRepository.save(allergens);
+    public Allergen create(Allergen allergen) {
+        return allergensRepository.save(allergen);
     }
 
     @Override
-    public Allergens delete(Allergens allergens) {
-        allergensRepository.delete(allergens);
-        return allergens;
+    public Allergen delete(Allergen allergen) {
+        allergensRepository.delete(allergen);
+        return allergen;
     }
 
     @Override
-    public Allergens update(Allergens allergens) {
-        return allergensRepository.save(allergens);
+    public Allergen update(Allergen allergen) {
+        return allergensRepository.save(allergen);
     }
 
     @Override
-    public List<Allergens> list() {
+    public List<Allergen> list() {
         return allergensRepository.findAll();
     }
 
     @Override
-    public Allergens findByName(String name) {
+    public Allergen findByName(String name) {
         try{
             return allergensRepository.findByName(name).get();
         }catch (NoSuchElementException e){
@@ -46,7 +46,7 @@ public class ImpAllergensService implements AllergensService {
     }
 
     @Override
-    public Allergens findByNumber(Integer number) {
+    public Allergen findByNumber(Integer number) {
         return allergensRepository.findByNumber(number).get();
     }
 }

@@ -1,14 +1,5 @@
 package com.bead.netkaja;
 
-import com.bead.netkaja.model.Allergens;
-import com.bead.netkaja.service.imp.ImpAllergensService;
-import com.bead.netkaja.service.imp.ImpCustomerService;
-import com.bead.netkaja.service.imp.ImpFoodService;
-import com.bead.netkaja.service.imp.ImpOrderService;
-import com.bead.netkaja.service.interf.AllergensService;
-import com.bead.netkaja.service.interf.CustomerService;
-import com.bead.netkaja.service.interf.FoodService;
-import com.bead.netkaja.service.interf.OrderService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -18,7 +9,7 @@ public class NetkajaApplication {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = SpringApplication.run(NetkajaApplication.class, args);
-		AllergensService allergensService = context.getBean(ImpAllergensService.class);
+	/*	AllergensService allergensService = context.getBean(ImpAllergensService.class);
 		CustomerService customerService = context.getBean(ImpCustomerService.class);
 		FoodService foodService = context.getBean(ImpFoodService.class);
 		OrderService orderService = context.getBean(ImpOrderService.class);
@@ -47,6 +38,6 @@ public class NetkajaApplication {
 
 		System.out.println("Szezámmag törlése");
 		allergensService.delete(allergens);
-		System.out.println(allergensService.findByName("Szezámmag"));
+		System.out.println(allergensService.findByName("Szezámmag"));*/
 	}
 }
