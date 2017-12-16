@@ -1,32 +1,23 @@
 package com.bead.netkaja.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
 
-@Data
 @Entity
-@EqualsAndHashCode(callSuper = false)
-public class Allergen {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    public Long ID;
-    @Column
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper = true)
+public class Allergen extends Base{
+    @Column(unique = true, nullable = false)
     private String name;
-    @Column
+    @Column(unique = true, nullable = false)
     private Integer number;
-
-    public Allergen(String name, Integer number) {
-        this.name = name;
-        this.number = number;
-    }
-
-    public Allergen(){
-
-    }
 
     public String toString(){
         return name + " " + number;
