@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service';
 
 @Component({
-  selector: 'app-regi-view',
-  templateUrl: './regi-view.component.html',
-  styleUrls: ['./regi-view.component.css']
+  selector: 'app-register-view',
+  templateUrl: './register-view.component.html',
+  styleUrls: ['./register-view.component.css'],
+  providers: [UserService]
 })
-export class RegiViewComponent implements OnInit {
+export class RegisterViewComponent implements OnInit {
 
   constructor() { }
 

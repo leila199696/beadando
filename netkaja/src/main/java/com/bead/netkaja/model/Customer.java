@@ -38,7 +38,7 @@ public class Customer extends Base{
     private Role status;
 
     public enum Role {
-        ADMIN,CUSTOMER;
+        ADMIN,CUSTOMER,GUEST
     }
 
     private ArrayList<Food> cart;

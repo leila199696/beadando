@@ -1,13 +1,14 @@
 export class Data {
     public id: number;
-    private likes: number;
-    private dislikes: number;
-    private date: Date;
-    private user: User;
-    private news: News;
+    private userName: string;
+    private password: string;
+    private name: string;
+    private address: string;
+    private phoneNumber: number;
+    private email: string;
 
     constructor(
-        private text: string
+       
     ) { }
 
     public getId(): number{
