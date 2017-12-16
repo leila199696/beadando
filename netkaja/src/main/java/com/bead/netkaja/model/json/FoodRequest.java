@@ -1,19 +1,19 @@
-package com.bead.netkaja.controller.json;
+package com.bead.netkaja.model.json;
 
 import lombok.Data;
 
 import java.util.List;
 
 @Data
-public class AddFood {
+public class FoodRequest {
     private String username;
-    private List<String> food;
+    private List<String> foodNameList;
 
     public String getUsername() {
         return username;
     }
 
-    public List<String> getFood() {
-        return food;
+    public List<String> getFoodNameList() {
+        return foodNameList;
     }
 }

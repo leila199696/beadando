@@ -1,10 +1,10 @@
 package com.bead.netkaja.repository;
 
-import java.util.Optional;
-
 import com.bead.netkaja.model.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
 
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
@@ -16,7 +16,7 @@ public interface CustomerRepository extends JpaRepository<Customer, Long> {
     
     Optional<Customer> findByAddress(String address);
 
-    Optional<Customer> findByUserName(String username);
+    Optional<Customer> findByUsername(String username);
 
-    Optional<Customer> findByUserNameAndPassword(String username, String password);
+    Optional<Customer> findByUsernameAndPassword(String username, String password);
 }

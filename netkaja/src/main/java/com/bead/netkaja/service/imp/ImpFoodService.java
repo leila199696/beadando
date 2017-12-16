@@ -1,6 +1,6 @@
 package com.bead.netkaja.service.imp;
 
-import com.bead.netkaja.model.Allergens;
+import com.bead.netkaja.model.Allergen;
 import com.bead.netkaja.model.Food;
 import com.bead.netkaja.repository.FoodRepository;
 import com.bead.netkaja.service.interf.FoodService;
@@ -15,7 +15,7 @@ public class ImpFoodService implements FoodService {
     private FoodRepository foodRepository;
 
     @Override
-    public List<Allergens> listAllergenicFood() {
+    public List<Allergen> listAllergenicFood() {
         return foodRepository.listAllergens();
     }
 

@@ -1,43 +1,63 @@
 package com.bead.netkaja;
 
+import com.bead.netkaja.model.*;
+import com.bead.netkaja.service.imp.ImpAllergenService;
+import com.bead.netkaja.service.imp.ImpCustomerService;
+import com.bead.netkaja.service.imp.ImpFoodService;
+import com.bead.netkaja.service.imp.ImpOrderService;
+import com.bead.netkaja.service.interf.AllergenService;
+import com.bead.netkaja.service.interf.CustomerService;
+import com.bead.netkaja.service.interf.FoodService;
+import com.bead.netkaja.service.interf.OrderService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import java.util.Arrays;
+
 @SpringBootApplication
 public class NetkajaApplication {
 
-	public static void main(String[] args) {
-		ConfigurableApplicationContext context = SpringApplication.run(NetkajaApplication.class, args);
-	/*	AllergensService allergensService = context.getBean(ImpAllergensService.class);
-		CustomerService customerService = context.getBean(ImpCustomerService.class);
-		FoodService foodService = context.getBean(ImpFoodService.class);
-		OrderService orderService = context.getBean(ImpOrderService.class);
+    public static void main(String[] args) {
+        ConfigurableApplicationContext context = SpringApplication.run(NetkajaApplication.class, args);
+        AllergenService allergenService = context.getBean(ImpAllergenService.class);
+        CustomerService customerService = context.getBean(ImpCustomerService.class);
+        FoodService foodService = context.getBean(ImpFoodService.class);
+        OrderService orderService = context.getBean(ImpOrderService.class);
 
-		//tesztelés create update delete list
-		allergensService.create(new Allergens("Glutén",1));
-		allergensService.create(new Allergens("Rákfélék",2));
-		allergensService.create(new Allergens("Tojás",3));
-		allergensService.create(new Allergens("Hal",4));
-		allergensService.create(new Allergens("Földimogyoró",5));
-		allergensService.create(new Allergens("Szójabab",6));
-		allergensService.create(new Allergens("Tej",7));
-		allergensService.create(new Allergens("Diófélék",8));
-		allergensService.create(new Allergens("Zeller",9));
-		allergensService.create(new Allergens("Mustár",10));
-		Allergens allergens = allergensService.create(new Allergens("Szezámmag",11));
-		allergensService.create(new Allergens("Kén-dioxid",12));
-		allergensService.create(new Allergens("Csillagfürt",13));
-		allergensService.create(new Allergens("Puhatestűek",14));
+        //default admin hozzáadása
+        if (customerService.findByUsername("admin") == null) {
+            Customer admin = new Customer("admin", "4dm1n", "Adminisztrátor", "Sehunse", "Sose vót", "admin@netkaja.hu");
+            admin.setRole(Role.ADMIN);
+            customerService.create(admin);
+            System.out.println("Admin felhasználó létrehozva.");
+        }
 
-		System.out.println("Allergének listája");
-		allergensService.list().forEach(System.out::println);
+        //tesztelés create update delete list
+        allergenService.create(new Allergen("Glutén", 1));
+        allergenService.create(new Allergen("Rákfélék", 2));
+        allergenService.create(new Allergen("Tojás", 3));
+        allergenService.create(new Allergen("Hal", 4));
+        allergenService.create(new Allergen("Földimogyoró", 5));
+        allergenService.create(new Allergen("Szójabab", 6));
+        allergenService.create(new Allergen("Tej", 7));
+        allergenService.create(new Allergen("Diófélék", 8));
+        allergenService.create(new Allergen("Zeller", 9));
+        allergenService.create(new Allergen("Mustár", 10));
+        Allergen allergen = allergenService.create(new Allergen("Szezámmag", 11));
+        allergenService.create(new Allergen("Kén-dioxid", 12));
+        allergenService.create(new Allergen("Csillagfürt", 13));
+        allergenService.create(new Allergen("Puhatestűek", 14));
+        foodService.create(new Food(FoodType.MAINCOURSE, "Túrós tészta", Arrays.asList(allergenService.findByName("Glutén"), allergenService.findByName("Tej"))));
 
-		System.out.println("Zeller keresése");
-		System.out.println(allergensService.findByName("Zeller"));
+        System.out.println("Allergének listája");
+        allergenService.list().forEach(System.out::println);
 
-		System.out.println("Szezámmag törlése");
-		allergensService.delete(allergens);
-		System.out.println(allergensService.findByName("Szezámmag"));*/
-	}
+        System.out.println("Zeller keresése");
+        System.out.println(allergenService.findByName("Zeller"));
+
+        System.out.println("Szezámmag törlése");
+        allergenService.delete(allergen);
+        System.out.println(allergenService.findByName("Szezámmag"));
+    }
 }

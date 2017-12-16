@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface AllergensRepository extends JpaRepository<Allergen, Long> {
+public interface AllergenRepository extends JpaRepository<Allergen, Long> {
     Optional<Allergen> findByName(String name);
     
     Optional<Allergen> findByNumber(Integer number);

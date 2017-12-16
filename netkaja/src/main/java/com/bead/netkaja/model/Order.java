@@ -10,14 +10,14 @@ import java.util.List;
 @Data
 @Entity
 @EqualsAndHashCode(callSuper = false)
-public class Order{
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    public Long ID;
-    @OneToOne
+@Table(name = "orders")
+public class Order {
+    private Long id;
+
+    @ManyToOne
     private Customer customer;
-    @Column
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+
+    @OneToMany
     private List<Food> foodList;
 
     public Order(Customer customer, List<Food> foodList) {
@@ -25,7 +25,31 @@ public class Order{
         this.foodList = foodList;
     }
 
-    public Order(){
+    public Order() {
 
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public List<Food> getFoodList() {
+        return foodList;
+    }
+
+    public void setFoodList(List<Food> foodList) {
+        this.foodList = foodList;
     }
 }

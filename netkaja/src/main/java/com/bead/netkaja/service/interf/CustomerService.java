@@ -15,4 +15,6 @@ public interface CustomerService extends CRUDService<Customer>{
     Order createOrder();
     boolean isLoggedIn();
     Customer getLoggedInUser();
+
+    Customer findByUsername(String username);
 }

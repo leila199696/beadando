@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Service
 public class ImpCustomerService extends UserServiceValidator implements CustomerService {
@@ -33,8 +34,7 @@ public class ImpCustomerService extends UserServiceValidator implements Customer
     }
 
     @Override
-    public Customer update(Customer customer)
-    {
+    public Customer update(Customer customer) {
         return customerRepository.save(customer);
     }
 
@@ -44,14 +44,14 @@ public class ImpCustomerService extends UserServiceValidator implements Customer
     }
 
     @Override
-    public void register(Customer customer) throws IllegalArgumentException{
+    public void register(Customer customer) throws IllegalArgumentException {
         isValid(customer);
         actualUser = customerRepository.save(customer);
     }
 
     @Override
     public void login(String name, String password) {
-        actualUser = customerRepository.findByUserNameAndPassword(name, password).get();
+        actualUser = customerRepository.findByUsernameAndPassword(name, password).get();
     }
 
     @Override
@@ -71,7 +71,7 @@ public class ImpCustomerService extends UserServiceValidator implements Customer
 
     @Override
     public Order createOrder() {
-        Order order = new Order(actualUser,actualUser.getCart());
+        Order order = new Order(actualUser, actualUser.getCart());
         return orderRepository.save(order);
     }
 
@@ -83,5 +83,15 @@ public class ImpCustomerService extends UserServiceValidator implements Customer
     @Override
     public Customer getLoggedInUser() {
         return actualUser;
+    }
+
+    @Override
+    public Customer findByUsername(String username) {
+        try {
+            return customerRepository.findByUsername(username).get();
+        } catch (NoSuchElementException e) {
+            System.out.println("Nincs ilyen user: " + username);
+            return null;
+        }
     }
 }

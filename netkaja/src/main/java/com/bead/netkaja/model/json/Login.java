@@ -1,4 +1,4 @@
-package com.bead.netkaja.controller.json;
+package com.bead.netkaja.model.json;
 
 import lombok.Data;
 
