@@ -6,6 +6,7 @@ import com.bead.netkaja.model.Order;
 import com.bead.netkaja.repository.CustomerRepository;
 import com.bead.netkaja.repository.OrderRepository;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
@@ -15,6 +16,7 @@ import java.util.List;
 @Service
 @SessionScope
 @Data
+@EqualsAndHashCode(callSuper = false)
 public class CustomerService extends CustomerServiceValidator{
     @Autowired
     private CustomerRepository customerRepository;
@@ -64,9 +66,8 @@ public class CustomerService extends CustomerServiceValidator{
     }
 
     public Order createOrder() {
-        //TODOOrder order = new Order(actualUser,actualUser.getCart());
-        //return orderRepository.save(order);
-      return null;
+        Order order = new Order(actualUser,actualUser.getCart());
+        return orderRepository.save(order);
     }
 
     public boolean isLoggedIn() {
