@@ -44,13 +44,15 @@ public class CustomerService extends CustomerServiceValidator{
         return customerRepository.findAll();
     }
 
-    public void register(Customer customer) throws IllegalArgumentException{
+    public Customer register(Customer customer) throws IllegalArgumentException{
         isValid(customer);
         actualUser = customerRepository.save(customer);
+        return actualUser;
     }
 
-    public void login(String name, String password) {
+    public Customer login(String name, String password) {
         actualUser = customerRepository.findByUserNameAndPassword(name, password).get();
+        return actualUser;
     }
 
     public void logout() {
@@ -76,5 +78,9 @@ public class CustomerService extends CustomerServiceValidator{
 
     public Customer getLoggedInUser() {
         return actualUser;
+    }
+
+    public Customer getUser(String id) {
+      return customerRepository.findById(id).get();
     }
 }
