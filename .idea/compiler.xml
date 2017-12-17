@@ -8,10 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="netkaja" />
+        <module name="netkaja (1)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="netkaja" target="1.8" />
+      <module name="netkaja (1)" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

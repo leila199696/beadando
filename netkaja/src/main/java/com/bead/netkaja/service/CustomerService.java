@@ -64,8 +64,9 @@ public class CustomerService extends CustomerServiceValidator{
     }
 
     public Order createOrder() {
-        Order order = new Order(actualUser,actualUser.getCart());
-        return orderRepository.save(order);
+        //TODOOrder order = new Order(actualUser,actualUser.getCart());
+        //return orderRepository.save(order);
+      return null;
     }
 
     public boolean isLoggedIn() {
