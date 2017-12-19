@@ -1,8 +1,8 @@
-import { Data } from '../classes/data';
+import { User } from '../classes/user';
 import { Food } from '../classes/food';
 export class Orders {
     public id: number;
-    private customer: Data;
+    private customer: User;
     private foods: Array<Food>;
     private date: Date;
 
