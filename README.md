@@ -68,16 +68,7 @@ Azok, akik nem tagok értelemszerűen nem érik el az eddigi rendeléseket sem a
 * GET /customer/data: Ügyfél személyes adatai
 * POST /customer/data: Ügyfél személyes adatainak szerkesztése
 
-### Felhasználóifelület-modell
-#### Oldalvázlatok:
-### Osztálymodell
 #### Adatmodell:
 ![Architektúra rajz](https://github.com/leila199696/beadando/blob/master/arch.JPG)
 
-#### Adatbázisterv:
-#### Állapotdiagram:
-### Dinamikus működés
 
-## Implementáció
-## Tesztelés
-## Felhasználói dokumentáció
