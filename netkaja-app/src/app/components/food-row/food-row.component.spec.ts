@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditOrderViewComponent } from './edit-order-view.component';
+import { FoodRowComponent } from './food-row.component';
 
-describe('EditOrderViewComponent', () => {
-  let component: EditOrderViewComponent;
-  let fixture: ComponentFixture<EditOrderViewComponent>;
+describe('FoodRowComponent', () => {
+  let component: FoodRowComponent;
+  let fixture: ComponentFixture<FoodRowComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EditOrderViewComponent ]
+      declarations: [ FoodRowComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EditOrderViewComponent);
+    fixture = TestBed.createComponent(FoodRowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,9 +1,10 @@
 import { User } from '../classes/user';
-import { Food } from '../classes/food';
-export class Orders {
+import { OrderItem } from '../classes/orderItem';
+
+export class Order {
     public id: number;
     private customer: User;
-    private foods: Array<Food>;
+    private foods: OrderItem;
     private date: Date;
 
     constructor(

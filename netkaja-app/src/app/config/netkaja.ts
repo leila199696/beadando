@@ -1,1 +1,0 @@
-export const netkaja = 'http://localhost:4200/netkaja/';
