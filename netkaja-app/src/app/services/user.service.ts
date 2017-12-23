@@ -1,25 +1,24 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from "../classes/user";
-import { Role } from "../classes/user";
+
 import { Observable, Subject } from 'rxjs';
-import { netkaja } from '../config/netkaja';
 
 @Injectable()
 export class UserService {
   private static loggedInUser: User = null;
-
   constructor(
     private httpClient: HttpClient
   ) { }
+  private netkaja: string='localhost:4200';
 
   public allUser(): Observable<any> {
-    return this.httpClient.get(netkaja + 'user');
+    return this.httpClient.get(this.netkaja + 'user');
   }
 
   public login(email: string, password: string): Observable<boolean> {
     const result = new Subject<boolean>();
-    this.httpClient.post(netkaja + 'user/login', { email, password }).subscribe((user: User) => {
+    this.httpClient.post(this.netkaja + 'user/login', { email, password }).subscribe((user: User) => {
       UserService.loggedInUser = user as User;
       result.next(true);
     }, (error) => {
@@ -30,14 +29,14 @@ export class UserService {
   }
 
   public logout(): void {
-    this.httpClient.post(netkaja + 'user/logout', null).subscribe(() => {
+    this.httpClient.post(this.netkaja + 'user/logout', null).subscribe(() => {
       UserService.loggedInUser = null;
     });
   }
 
   public regi(name: string, email: string, password: string): Observable<boolean> {
     const result = new Subject<boolean>();
-    this.httpClient.post(netkaja + 'user/regi', {name, email, password}).subscribe((user: User) => {
+    this.httpClient.post(this.netkaja + 'user/regi', {name, email, password}).subscribe((user: User) => {
       result.next(true);
     }, (error) => {
       result.next(false);
@@ -46,19 +45,19 @@ export class UserService {
   }
 
   public modify(id: number, user: User): Observable<any> {
-    return this.httpClient.put(netkaja + 'user/modify/' + id, user);
+    return this.httpClient.put(this.netkaja + 'user/modify/' + id, user);
   }
   
   public profile(id: number): Observable<any> {
-    return this.httpClient.get(netkaja + 'user/profile/' + id);
+    return this.httpClient.get(this.netkaja + 'user/profile/' + id);
   }
 
   public delete(id: number): Observable<any> {
-    return this.httpClient.delete(netkaja + 'user/delete/' + id);
+    return this.httpClient.delete(this.netkaja + 'user/delete/' + id);
   }
 
   public getLoggedInUser(): Observable<any> {
-    return this.httpClient.get(netkaja + 'user/loggedin');
+    return this.httpClient.get(this.netkaja + 'user/loggedin');
   }
 
   public isLoggedIn(): boolean {
@@ -66,7 +65,7 @@ export class UserService {
   }
 
   public syncLoginStatus(): void {
-    this.httpClient.get(netkaja + "user/loggedin").subscribe((user: User) => {
+    this.httpClient.get(this.netkaja + "user/loggedin").subscribe((user: User) => {
       if(user){
         UserService.loggedInUser = user as User;
       } else {
@@ -75,18 +74,6 @@ export class UserService {
     });
   }
 
-  public userHasRole(role: Role[]): boolean {
-    if (!this.isLoggedIn()) {
-      return false;
-    }
-    return role.includes(UserService.loggedInUser.role);
-  }
+ 
 
-  public getRole(): Role {
-    if (this.isLoggedIn()) {
-      return UserService.loggedInUser.role;
-      //return 'USER';
-    }
-    return undefined;
-}
 }
