@@ -29,6 +29,7 @@ import { UserComponent } from './components/user/user.component';
 import { UserViewComponent } from './components/user-view/user-view.component';
 import { AddFoodComponent } from './components/add-food/add-food.component';
 import { FoodRowComponent } from './components/food-row/food-row.component';
+import { FoodService } from './services/food/food.service';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { FoodRowComponent } from './components/food-row/food-row.component';
     EditUserComponent,
     UserViewComponent,
     AddFoodComponent,
-    FoodRowComponent
+    FoodRowComponent,
+    FoodService
   ],
   imports: [
     BrowserModule,
