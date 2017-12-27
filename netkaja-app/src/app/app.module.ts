@@ -1,27 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {
+  MatToolbarModule,
+  MatButtonModule,
+  MatIconModule,
+  MatMenuModule,
+  MatListModule,
+  MatTableModule,
+  MatProgressSpinnerModule,
+  // News
+  MatFormFieldModule,
+  MatInputModule,
+  MatButtonToggleModule,
+  MatChipsModule,
+  MatCardModule,
+  MatSelectModule
+} from '@angular/material'
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { RoutingModule } from './routing/routing.module'; 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
-import { 
-MatButtonModule, 
-MatInputModule, 
-MatListModule, 
-MatToolbarModule, 
-MatCardModule, 
-MatIconModule, 
-MatProgressSpinnerModule, 
-MatMenuModule,  
-MatTableModule,
- MatSelectModule 
-} from '@angular/material';
-
+import { AuthService } from './services/auth/auth.service'; 
 
 import { AppComponent } from './app.component';
 import { LoginViewComponent } from './components/login-view/login-view.component';
-import { NaviViewComponent } from './components/navi-view/navi-view.component';
+import { NaviComponent } from './components/navi/navi.component';
 import { FoodComponent } from './components/food/food.component';
 import { LoginComponent } from './components/login/login.component';
-import { OrdersComponent } from './components/orders/orders.component';
+import { OrderComponent } from './components/order/order.component';
 import { RegiComponent } from './components/regi/regi.component';
 import { DataComponent } from './components/data/data.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
@@ -29,17 +37,20 @@ import { UserComponent } from './components/user/user.component';
 import { UserViewComponent } from './components/user-view/user-view.component';
 import { AddFoodComponent } from './components/add-food/add-food.component';
 import { FoodRowComponent } from './components/food-row/food-row.component';
-import { FoodService } from './services/food/food.service';
+import { FoodCellComponent } from './components/food-cell/food-cell.component';
+import { MyOrdersComponent } from './components/my-orders/my-orders.component';
+import { AddOrdersComponent } from './components/add-orders/add-orders.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginViewComponent,
-    NaviViewComponent,
+    NaviComponent,
     FoodComponent,
     LoginComponent,
-    OrdersComponent,
+    OrderComponent,
     RegiComponent,
     DataComponent,
     UserComponent,
@@ -47,25 +58,36 @@ import { FoodService } from './services/food/food.service';
     UserViewComponent,
     AddFoodComponent,
     FoodRowComponent,
-    FoodService
+    FoodCellComponent,
+    MyOrdersComponent,
+    AddOrdersComponent
+
   ],
   imports: [
     BrowserModule,
-	BrowserAnimationsModule, 
-	MatButtonModule, 
-	MatInputModule, 
-	MatListModule, 
-	MatToolbarModule, 
-	MatCardModule, 
-	MatIconModule, 
-	MatProgressSpinnerModule, 
-	MatMenuModule, 
-	MatTableModule, 
-	MatSelectModule
-	],
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
+
+    // news
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonToggleModule, 
+    MatChipsModule,
+    MatCardModule,
+    MatSelectModule,
+    HttpClientModule,
+    //
+    FlexLayoutModule,
+    RoutingModule,
+    // News
+    FormsModule
+  ],
   exports: [MatButtonModule, MatInputModule, MatListModule, MatToolbarModule, MatCardModule, MatIconModule, MatProgressSpinnerModule, MatMenuModule, MatTableModule, MatSelectModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
