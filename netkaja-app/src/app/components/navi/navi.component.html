@@ -6,7 +6,6 @@
 
   <span fxHide="false" fxHide.gt-sm></span>
   <div fxLayout="row" fxShow="false" fxShow.gt-sm>
-    <button mat-button routerLink="/food">Étlap</button>
     <div *ngIf="!authService.isLoggedIn">
       <button mat-button routerLink="/login">Bejelentkezés</button>
       <button mat-button routerLink="/regi">Regisztráció</button>
@@ -31,7 +30,6 @@
 </mat-toolbar>
 
 <mat-menu xPosition="before" #menu="matMenu">
-  <button mat-menu-item routerLink="/food">Étlap</button>
   <div *ngIf="!authService.isLoggedIn">
     <button mat-menu-item routerLink="/login">Login</button>
     <button mat-menu-item routerLink="/regi">Regisztráció</button>

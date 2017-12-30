@@ -4,7 +4,7 @@ import { RouterModule, Routes }   from '@angular/router';
 
 import { AppComponent } from '../app.component';
 
-import { LoginComponent } from '../components/login/login.component';
+import { LoginViewComponent } from '../components/login-view/login-view.component';
 import { RegiComponent } from '../components/regi/regi.component';
 import {FoodComponent} from '../components/food/food.component';
 import {AddFoodComponent} from '../components/add-food/add-food.component';
@@ -27,7 +27,7 @@ const routes: Routes = [
 
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginViewComponent
   },
 
   {
